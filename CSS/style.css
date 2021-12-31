@@ -1,0 +1,297 @@
+body {
+  background-color: #E9967A;
+  display: flex;
+  height: 100vh;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 26rem;
+  justify-content: center;
+  margin: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+div, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.puzzle {
+  background-color: #FFFAF0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 22.5rem;
+  margin: auto;
+  width: 22.5rem;
+}
+
+[class^="tile"] {
+  background-image: url("../images/flower.png");
+  background-size: 22.5rem;
+  cursor: pointer;
+}
+
+[class^="tile"].transition {
+  transition: transform linear .1s;
+}
+
+.tile1 {
+  background-position: 0 0;
+}
+
+.tile2 {
+  background-position: -5.625rem 0;
+}
+
+.tile3 {
+  background-position: -11.25rem 0;
+}
+
+.tile4 {
+  background-position: -16.875rem 0;
+}
+
+.tile5 {
+  background-position: 0 -5.625rem;
+}
+
+.tile6 {
+  background-position: -5.625rem -5.625rem;
+}
+
+.tile7 {
+  background-position: -11.25rem -5.625rem;
+}
+
+.tile8 {
+  background-position: -16.875rem -5.625rem;
+}
+
+.tile9 {
+  background-position: 0 -11.25rem;
+}
+
+.tile10 {
+  background-position: -5.625rem -11.25rem;
+}
+
+.tile11 {
+  background-position: -11.25rem -11.25rem;
+}
+
+.tile12 {
+  background-position: -16.875rem -11.25rem;
+}
+
+.tile13 {
+  background-position: 0 -16.875rem;
+}
+
+.tile14 {
+  background-position: -5.625rem -16.875rem;
+}
+
+.tile15 {
+  background-position: -11.25rem -16.875rem;
+}
+
+.tile16 {
+  background: #FFFAF0;
+  cursor: default;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 16rem;
+}
+
+.btn {
+  align-items: center;
+  background-color: #FFFAF0;
+  border: .0625rem solid #800080;
+  border-radius: .5rem;
+  display: inline-flex;
+  font-size: .8rem;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  margin: 0 1rem;
+  transition: transform linear .2s;
+  white-space: nowrap;
+  width: 6.2rem;
+}
+
+.btn:focus {
+  border-color: #719ECE;
+  color: #800080;
+  outline: none;
+  transform: scale(1.05);
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    border-color: #719ECE;
+    color: #800080;
+    transform: scale(1.05);
+  }
+}
+
+@media only screen and (max-width: 26rem) {
+  main {
+    height: 24rem;
+  }
+
+  .puzzle {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  [class^="tile"] {
+    background-size: 20rem;
+  }
+
+  .tile1 {
+    background-position: 0 0;
+  }
+
+  .tile2 {
+    background-position: -5rem 0;
+  }
+
+  .tile3 {
+    background-position: -10rem 0;
+  }
+
+  .tile4 {
+    background-position: -15rem 0;
+  }
+
+  .tile5 {
+    background-position: 0 -5rem;
+  }
+
+  .tile6 {
+    background-position: -5rem -5rem;
+  }
+
+  .tile7 {
+    background-position: -10rem -5rem;
+  }
+
+  .tile8 {
+    background-position: -15rem -5rem;
+  }
+
+  .tile9 {
+    background-position: 0 -10rem;
+  }
+
+  .tile10 {
+    background-position: -5rem -10rem;
+  }
+
+  .tile11 {
+    background-position: -10rem -10rem;
+  }
+
+  .tile12 {
+    background-position: -15rem -10rem;
+  }
+
+  .tile13 {
+    background-position: 0 -15rem;
+  }
+
+  .tile14 {
+    background-position: -5rem -15rem;
+  }
+
+  .tile15 {
+    background-position: -10rem -15rem;
+  }
+}
+
+@media only screen and (max-width: 20rem) {
+  main {
+    height: 18rem;
+  }
+
+  .puzzle {
+    height: 14rem;
+    width: 14rem;
+  }
+
+  [class^="tile"] {
+    background-size: 14rem;
+  }
+
+  .tile1 {
+    background-position: 0 0;
+  }
+
+  .tile2 {
+    background-position: -3.5rem 0;
+  }
+
+  .tile3 {
+    background-position: -7rem 0;
+  }
+
+  .tile4 {
+    background-position: -10.5rem 0;
+  }
+
+  .tile5 {
+    background-position: 0 -3.5rem;
+  }
+
+  .tile6 {
+    background-position: -3.5rem -3.5rem;
+  }
+
+  .tile7 {
+    background-position: -7rem -3.5rem;
+  }
+
+  .tile8 {
+    background-position: -10.5rem -3.5rem;
+  }
+
+  .tile9 {
+    background-position: 0 -7rem;
+  }
+
+  .tile10 {
+    background-position: -3.5rem -7rem;
+  }
+
+  .tile11 {
+    background-position: -7rem -7rem;
+  }
+
+  .tile12 {
+    background-position: -10.5rem -7rem;
+  }
+
+  .tile13 {
+    background-position: 0 -10.5rem;
+  }
+
+  .tile14 {
+    background-position: -3.5rem -10.5rem;
+  }
+
+  .tile15 {
+    background-position: -7rem -10.5rem;
+  }
+}
